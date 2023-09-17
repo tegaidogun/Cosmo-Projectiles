@@ -9772,41 +9772,40 @@ PrefabInstance:
         spirit of innovation. Here we acknowledge the significant contributions and
         the support that made this project a reality.
 
-        
-
-        Project
-        Lead & Solo Developer: Oghenetega Idogun
 
 
-        I was the backbone of
-        this project, bursting with determination. Leading this project single-handedly,
-        I showcased remarkable skill and innovation, bringing a vision to life through
-        countless hours of dedication and hard work.
+        Project Lead & Solo
+        Developer: Oghenetega Idogun
 
-        
 
-        3D Rocket
-        Ship Model: brazzy_CGI
+        I was the backbone of this project,
+        bursting with determination. Leading this project single-handedly, I showcased
+        remarkable skill and innovation, bringing a vision to life through countless
+        hours of dedication and hard work.
 
-        
 
-        A special thanks to brazzy_CGI,
-        whose exceptional skills in 3D modeling brought the rocket ship to life.
 
-        
+        3D Rocket Ship Model: brazzy_CGI
 
-        Project
-        Mentor: Denise Mendez, Microsoft
 
-        
 
-        This project wouldn''t
-        have reached its pinnacle without the guidance and recommendation of Denise
-        Mendez from Microsoft. Her belief in the project''s potential and her personal
-        challenge served as a beacon of inspiration, guiding it to fruition. Her
-        insights and encouragement have been a cornerstone in shaping this project.
+        A
+        special thanks to brazzy_CGI, whose exceptional skills in 3D modeling brought
+        the rocket ship to life.
 
-        
+
+
+        Project Mentor: Denise Mendez, Microsoft
+
+
+
+        This
+        project wouldn''t have reached its pinnacle without the guidance and recommendation
+        of Denise Mendez from Microsoft. Her belief in the project''s potential and
+        her personal challenge served as a beacon of inspiration, guiding it to fruition.
+        Her insights and encouragement have been a cornerstone in shaping this project.
+
+
 
         This
         project is not only a testament to technological advancement but also an
@@ -9814,11 +9813,11 @@ PrefabInstance:
         A hearty thank you to everyone involved, directly or indirectly, in making
         this project a success.
 
-        
 
-        Feel free to personalize it
-        further on github according to your experiences and journey through the project.
-        Good luck with your presentation at Shellhacks 2023!'
+
+        Feel free to personalize it further on
+        github according to your experiences and journey through the project. Good
+        luck with your presentation at Shellhacks 2023!'
       objectReference: {fileID: 0}
     - target: {fileID: 6930810734943986774, guid: cca6164bb2744884a92a100266f5f3aa, type: 3}
       propertyPath: m_enableWordWrapping
@@ -21161,7 +21160,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   <OnEnabled>k__BackingField:
     m_PersistentCalls:
