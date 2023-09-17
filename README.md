@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<h1>Cosmo-Projectiles: AR Rocket Launch Simulation: Unity Project</h1>
+<h1>Cosmo-Projectiles: AR Phsyics Simulation: Unity Project</h1>
 
-<p>Welcome to the repository of the AR Rocket Launch Simulation called <b>Cosmo-Projectiles</b>, a solo-project developed for the Shellhacks 2023 AR Challenge hosted by Microsoft. This project showcases a simple rocket launch simulation, offering an educative AR experience.</p>
+<p>Welcome to the repository of the AR Rocket Launch Simulation called <b>Cosmo-Projectiles</b>, a solo-project developed for the two-day Hackathon Shellhacks 2023 AR Challenge hosted by Microsoft. This project showcases a simple rocket launch simulation, offering an educative AR experience.</p>
 
 <h2>Requirements</h2>
 
