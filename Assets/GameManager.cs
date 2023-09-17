@@ -5,12 +5,20 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private string[] gameOverTexts =
+    private string[] gameOverTextsMomentum =
     {
-        "Mission Failed! Your ship couldn't withstand the forces of space. Try again with different settings.",
-        "Oh no! Your ship has exploded due to excessive momentum. Adjust your parameters and give it another go!",
-        "Game Over! The journey to space is treacherous. Tweak your settings and try again.",
-        "Crash and Burn! Your ship couldn't make it this time. Try again with a new strategy."
+        "Mission Unsuccessful! Your rocket couldn't maintain the necessary momentum to break through the atmosphere. Reevaluate your settings and try again!",
+        "Oops! Your vessel couldn't handle the high momentum. Adjust your variables to ensure a steadier ascent!",
+        "Attempt Failed! Overwhelming momentum caused your ship to lose its course. Fine-tune your settings for a more controlled flight!",
+        "Tragedy Strikes! Your rocket succumbed to the forces of momentum. Reconfigure your parameters for a more balanced voyage."
+    };
+
+    private string[] gameOverTextsFalling =
+    {
+        "Mission Failed! Your ship fell back to Earth due to insufficient thrust. Adjust your settings for a stronger lift-off.",
+        "Oh no! Your ship couldn't sustain its altitude and fell. Revisit your parameters to prevent a free fall on your next attempt!",
+        "Game Over! Your spacecraft succumbed to gravity's pull. Modify your settings for a successful journey to the stars.",
+        "Crash and Burn! Your ship plummeted back down. Redefine your strategy to prevent a fall on your next venture."
     };
 
     private string[] victoryTexts =
@@ -29,10 +37,15 @@ public class GameManager : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject rocketShip;
 
-    public string GetRandomGameOverText()
+    public string GetRandomGameOverTextMomentum()
     {
-        int index = Random.Range(0, gameOverTexts.Length);
-        return gameOverTexts[index];
+        int index = Random.Range(0, gameOverTextsMomentum.Length);
+        return gameOverTextsMomentum[index];
+    }
+    public string GetRandomGameOverTextFalling()
+    {
+        int index = Random.Range(0, gameOverTextsFalling.Length);
+        return gameOverTextsFalling[index];
     }
 
     public string GetRandomVictoryText()
@@ -41,11 +54,19 @@ public class GameManager : MonoBehaviour
         return victoryTexts[index];
     }
 
-    public void GameOver()
+    public void GameOverMomentum()
     {
         rocketShip.SetActive(false);
         pauseScreen.SetActive(false);
-        gameOverText.text = GetRandomGameOverText();
+        gameOverText.text = GetRandomGameOverTextMomentum();
+        gameOver.SetActive(true);
+        AudioManager.Instance.PlaySFX("Game Over");
+    }
+    public void GameOverFalling()
+    {
+        rocketShip.SetActive(false);
+        pauseScreen.SetActive(false);
+        gameOverText.text = GetRandomGameOverTextFalling();
         gameOver.SetActive(true);
         AudioManager.Instance.PlaySFX("Game Over");
     }

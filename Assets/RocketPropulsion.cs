@@ -35,6 +35,8 @@ public class RocketPropulsion : MonoBehaviour
     public bool isVictory;
     public bool isGameOver;
 
+    public bool thrustIsFinished = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -68,17 +70,17 @@ public class RocketPropulsion : MonoBehaviour
         rb.AddForce(new Vector3(0, -GRAVITY * MASS, 0));
 
         // Implement logic when the rocket reaches the target position
-        if (transform.position.y >= targetPositionY && cumulativeMomentum < maxMomentum && !isGameOver)
+        if (transform.position.y >= targetPositionY && cumulativeMomentum < maxMomentum && !isGameOver && !isVictory)
         {
             // Logic for when the rocket reaches the target position
             isVictory = true;
             gameManager.Victory();
         }
 
-        if (rb.velocity.y < 0 && rocketIsLaunched && !isVictory)
+        if (rb.velocity.y < 0 && rocketIsLaunched && !isVictory && !isGameOver)
         {
             isGameOver = true;
-            gameManager.GameOver();
+            gameManager.GameOverFalling();
         }
     }
 
@@ -111,12 +113,12 @@ public class RocketPropulsion : MonoBehaviour
             cumulativeMomentum += changeInMomentum;
 
             // Check if the cumulative momentum exceeds the maximum allowed value
-            if (cumulativeMomentum > maxMomentum && !isVictory)
+            if (cumulativeMomentum > maxMomentum && !isVictory && !isGameOver)
             {
                 explosion.Play();
                 rocketShipModel.SetActive(false);
                 isGameOver = true;
-                gameManager.GameOver();
+                gameManager.GameOverMomentum();
                 AudioManager.Instance.PlaySFX("Rocket Explodes");
             }
 
@@ -124,6 +126,7 @@ public class RocketPropulsion : MonoBehaviour
         }
 
         thrust = 0;
+        thrustIsFinished = true;
     }
 
     public void UpdateMass(SliderEventData eventData)
@@ -163,21 +166,18 @@ public class RocketPropulsion : MonoBehaviour
 
     private float CalculateMinMass(float thrust)
     {
-        float a = 16f / 1575f;
-        float b = 8f / 7f;
-        float c = 57800f / 63f;
+        float a, b, c;
 
-        // Solving the quadratic equation for mass
-        float discriminant = b * b - 4f * a * (c - thrust);
+        // Assuming the function passes through (0, 0) and (350, 3000)
+        // We can solve the system of equations to find the coefficients a, b, and c
+        // 0 = a * (0)^2 + b * (0) + c
+        // 3000 = a * (350)^2 + b * (350) + c
 
-        if (discriminant < 0f)
-        {
-            // No real solution, you might want to handle this case appropriately in your game
-            return -1f;
-        }
+        c = 0; // From the first equation
+        a = (3000 - c) / (350 * 350); // From the second equation
+        b = 0; // Assuming a simple quadratic relationship with no linear term
 
-        // We consider only one solution of the quadratic equation as it will be the valid solution in this context
-        float mass = (-b + Mathf.Sqrt(discriminant)) / (2f * a);
+        float mass = (-b + Mathf.Sqrt(b * b - 4 * a * (c - thrust))) / (2 * a);
 
         return mass;
     }

@@ -809,11 +809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5677198132984834573, guid: f64620d502cdf0f429efa27703913cb7, type: 3}
       propertyPath: value
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5677198132984834573, guid: f64620d502cdf0f429efa27703913cb7, type: 3}
       propertyPath: maxValue
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5677198132984834578, guid: f64620d502cdf0f429efa27703913cb7, type: 3}
       propertyPath: m_Pivot.x
@@ -6268,17 +6268,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6b351a67ceb69140b199996bbbea156, type: 3}
---- !u!114 &1066557211 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1922220768106560367, guid: c6b351a67ceb69140b199996bbbea156, type: 3}
-  m_PrefabInstance: {fileID: 1066557210}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1066557212 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8376646494505211229, guid: c6b351a67ceb69140b199996bbbea156, type: 3}
@@ -7609,6 +7598,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8376646494505211229, guid: c6b351a67ceb69140b199996bbbea156, type: 3}
   m_PrefabInstance: {fileID: 1236311274}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1241527791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6930810734943986774, guid: cca6164bb2744884a92a100266f5f3aa, type: 3}
+  m_PrefabInstance: {fileID: 56094750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1245085650
 GameObject:
   m_ObjectHideFlags: 0
@@ -7795,13 +7795,14 @@ MonoBehaviour:
   thrustDurationText: {fileID: 1848537485}
   thrustTime: 0
   cumulativeMomentum: 0
-  maxMomentum: 6500
+  maxMomentum: 5500
   explosion: {fileID: 3623194737886426709, guid: 7fb8a08df56bd6b4d9702d708cd9fbad, type: 3}
   rocketShipModel: {fileID: 547965151}
   gameManager: {fileID: 1548953094}
   rocketIsLaunched: 0
   isVictory: 0
   isGameOver: 0
+  thrustIsFinished: 0
 --- !u!54 &1254604797
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8179,6 +8180,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335612154}
   m_CullTransparentMesh: 1
+--- !u!114 &1340426703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6930810734943986774, guid: cca6164bb2744884a92a100266f5f3aa, type: 3}
+  m_PrefabInstance: {fileID: 2030261297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1356896300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9432,8 +9444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fd86824025fc24db0322d3aa230727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverText: {fileID: 1066557211}
-  victoryText: {fileID: 2030261298}
+  gameOverText: {fileID: 1241527791}
+  victoryText: {fileID: 1340426703}
   gameOver: {fileID: 56094752}
   victory: {fileID: 2030261300}
   pauseScreen: {fileID: 463659904}
@@ -13557,17 +13569,6 @@ PrefabInstance:
       addedObject: {fileID: 1481410217}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6164bb2744884a92a100266f5f3aa, type: 3}
---- !u!114 &2030261298 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8827677862171032275, guid: cca6164bb2744884a92a100266f5f3aa, type: 3}
-  m_PrefabInstance: {fileID: 2030261297}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &2030261299 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6930810734955394187, guid: cca6164bb2744884a92a100266f5f3aa, type: 3}
@@ -14284,7 +14285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Make the rocket go as high as possible, around 400 units above the ground.
+  m_text: Make the rocket go as high as possible, around 150 units above the ground.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fea6b26abeefbc547b6aca1dbda0a34d, type: 2}
   m_sharedMaterial: {fileID: -2049848100760321927, guid: fea6b26abeefbc547b6aca1dbda0a34d, type: 2}
