@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rocket (High Poly, Simple, FREE)
+* source:	https://sketchfab.com/3d-models/rocket-high-poly-simple-free-34eb9f0902f640a0a112e6f16261b755
+* author:	brazzy_CGI (https://sketchfab.com/brazzy_cgi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rocket (High Poly, Simple, FREE)" (https://sketchfab.com/3d-models/rocket-high-poly-simple-free-34eb9f0902f640a0a112e6f16261b755) by brazzy_CGI (https://sketchfab.com/brazzy_cgi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
